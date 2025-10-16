@@ -1,0 +1,215 @@
+﻿/*=========== modal ================*/
+
+.modal-body h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 42px;
+    text-transform: uppercase;
+    color: #495833;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+#modal .modal-content {
+    border-radius: 0;
+}
+
+.modal-body h2::after{
+    content: "";
+    width: 75px;
+    height: 3px;
+    background-color: #495833;
+    margin-top: 10px;
+}
+
+#modal .btn-modal {
+    width: 120px;
+    height: 48px;
+    background-color: transparent;
+    border: 3px solid #FFFFFF;
+    margin-top: 40px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50px;
+    top: 175px;
+}
+
+#modal .btn-modal:hover{
+    border-color: #1cd99d;
+    background-color: #1cd99d;
+}
+
+#modal p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    width: 160px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 auto;
+}
+
+.modal-header{
+    border-bottom: none;
+}
+#modal h2::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background-color: #495833;
+    margin-top: 10px;
+  }
+
+#modal h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #495833;
+    padding-top: 160px;
+}
+
+#modal .use h2 {
+    color: #FFFFFF;
+}
+
+#modal .use h2::after {
+    background-color: #FFFFFF;
+}
+
+#modal {
+    height: 708px;
+}
+
+.modaluse {
+    width: 220px;
+    height: 287px;
+}
+
+.modaluse img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.modal1 div, .modal2 div, .modal3 div, .modal4 div {
+    background: rgba(25, 26, 23, 0.7);
+    border-radius: 0%;
+}
+
+.modal1 {
+    background-image: url("../img/modal01.webp");
+    width: 220px;
+    height: 287px;
+}
+
+.modal2 {
+    background-image: url("../img/modal02.webp");
+    width: 220px;
+    height: 287px;    
+}
+.modal3 {
+    background-image: url("../img/modal03.webp");
+    width: 220px;
+    height: 287px;
+}
+.modal4 {
+    background-image: url("../img/modal04.webp");
+    width: 220px;
+    height: 287px;
+}
+#modal-grid-img {
+    padding: 40px 70px;
+}
+/*Modal Contato*/
+
+
+    #area_modal_contato{
+        border-radius: 0;  
+    }
+
+    #contact .modal-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #contact .modal-body form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    #contact .modal-body div {
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+
+    #contact .modal-body div label{
+        display:flex;       
+    }
+
+    #contact .modal-body div input{
+        display: flex;
+        height: 40px;
+        width: 520px;
+        border: 3px solid #495833;   
+    }
+
+    #contact .modal-body div textarea{
+        width: 520px;
+        border: 3px solid #495833;
+    }
+
+    #contact .modal-body div button{
+        padding: 10px 38px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        text-transform: uppercase; 
+        color: #495833;
+        background: #DEAD28;
+    }
+
+    /*Modal Como Utlizar*/
+
+    .modalCenter{
+        display: none;
+    }
+    .modal-body .titulo_modal_comoutilizar{
+        margin-bottom: 0 !important;
+        padding-top:0 !important ;
+        
+    }
+
+    .modal-body #eucalipto_para_cercas_img1 {
+        display: flex;
+        flex-direction: row;
+        }
+
+    .modal-body #eucalipto_para_cercas_img1 img{
+        margin: 5px;
+        margin-bottom: 0;
+    }
+
+    .modal-body #eucalipto_para_cercas_img2{
+        display: block;
+        margin-top: 0;
+        margin-bottom: 70px;
+    }
+

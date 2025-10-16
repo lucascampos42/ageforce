@@ -1,0 +1,139 @@
+﻿/*================================ Top Navigation ===============================================*/
+.scroll { 
+  position: fixed !important;
+  background-color: var(--bg-color-2);
+  z-index: 100;
+}
+
+nav#navigation {
+  display: flex;
+  position: absolute;
+  height: 80px;
+  top: 0;
+  width: 100vw;
+  /* background-color: var(--bg-color-2); */
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav#navigation .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px !important;
+}
+
+nav#navigation button {
+  z-index: 2;
+  background-color: transparent;
+  border: none;
+  height: 25px;
+  width: 35px;
+}
+
+nav#navigation .close_menu {
+  position: absolute;
+  top: 39px;
+  left: 0;
+}
+  
+nav#navigation .menu-options {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  z-index: 100;
+  background-color: var(--nav-secondary-color);
+  height: 100vh;
+  width: calc(20vh + 10%);
+  right: calc(-20vh - 10%);
+  top: 0;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  -webkit-transition: 300ms ease all;
+  transition: 300ms ease all;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+nav#navigation .active_menu {
+  right: 0;
+  top: 0;
+}
+
+#navigation ul {
+  padding: 0;
+  justify-self: center;
+  width: 150px;
+}
+  
+#navigation li {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+
+}
+
+#navigation li:hover {
+  font-size: 18px;
+}
+
+#navigation li:first-child {
+  margin-top: 80px;
+}
+  
+#navigation ul li a{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 2559px) {
+  nav#navigation .menu-options {
+    width: calc(30vh + 20%);
+    right: calc(-30vh - 20%);
+  }
+
+  nav#navigation .active_menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 2559px) and (min-width: 2250px) {
+  nav#navigation .menu-options {
+    width: calc(25vh + 20%);
+    right: calc(-25vh - 20%);
+  }
+
+  nav#navigation .active_menu {
+    right: 0;
+  }
+}
+
+
+@media screen and (max-width: 2250px) and (min-width: 2000px) {
+  nav#navigation .menu-options {
+    width: calc(20vh + 20%);
+    right: calc(-20vh - 20%);
+  }
+
+  nav#navigation .active_menu {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 2000px) and (min-width: 1750px) {
+  nav#navigation .menu-options {
+    width: calc(10vh + 20%);
+    right: calc(-10vh - 20%);
+  }
+
+  nav#navigation .active_menu {
+    right: 0;
+  }
+}
