@@ -29,40 +29,50 @@ nav#navigation .container {
 }
 
 nav#navigation .logo {
-  height: 50px;
+  height: 65px;
   width: auto;
   transition: all 0.3s ease;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-.scroll nav#navigation .logo {
-  height: 40px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-  padding: 8px 12px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
+  padding: 10px 15px;
+  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.scroll nav#navigation .logo {
+  height: 55px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   transition: all 0.3s ease;
   filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
 }
 
 nav#navigation button {
   z-index: 1001;
-  background-color: transparent;
-  border: none;
-  height: 25px;
-  width: 35px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.2) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
   cursor: pointer;
   transition: all 0.3s ease;
-  padding: 5px;
-  border-radius: 5px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  padding: 8px;
+  border-radius: 10px;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 nav#navigation button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.5));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
 }
 
 nav#navigation .close_menu {
