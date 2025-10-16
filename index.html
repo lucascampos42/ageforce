@@ -101,6 +101,7 @@
         <ul role="menubar">
           <li role="none"><a href="#home" role="menuitem">Home</a></li>
           <li role="none"><a href="#reference" role="menuitem">Diferencial</a></li>
+          <li role="none"><a href="#biomassa" role="menuitem">Biomassa</a></li>
           <li role="none"><a href="#about" role="menuitem">Sobre Nós</a></li>
           <li role="none"><a href="#contact" role="menuitem">Contatos</a></li>
         </ul>
@@ -187,6 +188,87 @@
     </div>
   </section>
 
+  <!-- ======= Biomassa Section ======= -->
+  <section id="biomassa" class="biomassa-section">
+    <div class="container">
+      <!-- Header da Seção -->
+      <div class="biomassa-header text-center mb-5">
+        <h2 class="biomassa-title scr_top">Biomassa: Energia Renovável e Sustentável</h2>
+        <p class="biomassa-subtitle scr_top">Entenda o que é, sua importância e como ela contribui para um futuro mais limpo.</p>
+      </div>
+
+      <!-- Conteúdo Principal -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 scr_left">
+          <div class="biomassa-content">
+            <h3 class="biomassa-section-title">O que é Biomassa?</h3>
+            <p class="biomassa-description">
+              Biomassa é todo recurso renovável que vem de matéria orgânica, seja ela vegetal ou animal. É usada para produzir calor, eletricidade e combustíveis, transformando o que seria resíduo em uma poderosa fonte de energia limpa.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 scr_right">
+          <div class="biomassa-image">
+            <img src="./assets/img/materia_prima_eucalipto.webp" alt="Biomassa de Eucalipto" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Cards de Usos -->
+      <div class="biomassa-uses">
+        <h3 class="biomassa-section-title text-center mb-4 scr_top">Principais Usos e Importância</h3>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4 scr_left">
+            <div class="biomassa-card">
+              <div class="biomassa-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Geração de Eletricidade</h4>
+              <p>Queima de biomassa em usinas para gerar vapor e mover turbinas.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 scr_left_slow">
+            <div class="biomassa-card">
+              <div class="biomassa-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Aquecimento Industrial</h4>
+              <p>Utilizada para aquecer caldeiras e fornos em diversos setores.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 scr_right_slow">
+            <div class="biomassa-card">
+              <div class="biomassa-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 12h18m-9-9v18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <h4>Biocombustíveis</h4>
+              <p>Produção de etanol e biodiesel a partir de plantas como cana-de-açúcar e milho.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4 scr_right">
+            <div class="biomassa-card">
+              <div class="biomassa-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <h4>Sustentabilidade</h4>
+              <p>Por ser neutra em carbono e aproveitar resíduos, reduz o lixo e a emissão de gases de efeito estufa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Biomassa Section -->
+
   <!-- about -->
   <section id="about">
     <div class="container conteudo_about">
@@ -220,7 +302,7 @@
 
           <p class="scr_left_slow_1">
             <img src="./assets/img/icon_telefone.webp" alt="Icone de telefone">
-            Telefone: (67) 3441-3442
+            Telefone: <span id="phoneNumber">(67) 3441-3442</span>
           </p>
 
           <p class="scr_left_slow_1">
@@ -241,7 +323,7 @@
           </p>
 
           <div class="contact-buttons">
-            <a href="https://wa.me/send?phone=556734412025&text=Ol%C3%A1!!%20Vi%20seu%20site%20e%20queria%20saber%20mais%20sobre%20seus%20produtos!" target="_blank"><button class="btn_wp scr_left_slow_2" aria-label="Whatsapp">Whatsapp</button></a>
+            <a id="contactWhatsappButton" href="#" target="_blank"><button class="btn_wp scr_left_slow_2" aria-label="Whatsapp">Whatsapp</button></a>
             <button type="button" class="btn-modal scr_left_slow_3" data-bs-toggle="modal" data-bs-target="#modal_contato" aria-label="Orçamento">Orçamento</button>
           </div>
         </div>
@@ -353,6 +435,7 @@
               <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#reference">Diferencial</a></li>
+                <li><a href="#biomassa">Biomassa</a></li>
                 <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#contact">Contatos</a></li>
               </ul>
@@ -400,26 +483,40 @@
 
   <a id="backToTopButton" href="#home">
     <svg
-      width="40"
-      height="40"
-      viewBox="0 0 40 40"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="20" cy="20" r="20" fill="#DEAD28" />
       <path
-        d="M20 27V13"
+        d="M12 19V5"
         stroke="white"
-        stroke-width="2"
+        stroke-width="2.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
-        d="M13 20L20 13L27 20"
+        d="M5 12L12 5L19 12"
         stroke="white"
-        stroke-width="2"
+        stroke-width="2.5"
         stroke-linecap="round"
         stroke-linejoin="round"
+      />
+    </svg>
+  </a>
+
+  <a id="whatsappButton" href="#" target="_blank" aria-label="Falar no WhatsApp">
+    <svg
+      width="28"
+      height="28"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"
+        fill="white"
       />
     </svg>
   </a>

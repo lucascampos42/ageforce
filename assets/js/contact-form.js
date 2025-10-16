@@ -154,7 +154,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function enviarViaWhatsApp(dados) {
-        const numeroWhatsApp = '5567999999999'; // Substitua pelo número real
+  // Obter número do WhatsApp da variável CSS
+  const numeroWhatsApp = getComputedStyle(document.documentElement)
+    .getPropertyValue('--whatsapp-number')
+    .replace(/"/g, '')
+    .trim();
         
         let mensagem = `*Nova solicitação de orçamento*\n\n`;
         mensagem += `*Nome:* ${dados.nome}\n`;

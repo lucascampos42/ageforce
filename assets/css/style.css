@@ -50,6 +50,10 @@ img[loading="lazy"].loaded {
   --bg-color-2: var(--agforce-gray-dark);
   --title-color-1: var(--agforce-white);
   
+  /* Contato */
+--whatsapp-number: "556734413442"; /* Número do WhatsApp (altere aqui para mudar em todo o site) */
+--phone-number: "(67) 3441-3442"; /* Número do telefone fixo (altere aqui para mudar em todo o site) */
+  
   /* Transições e sombras */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
@@ -840,17 +844,84 @@ iframe, video {
 }
 
 #backToTopButton {
-  position: fixed;
-  bottom: -26px;
-  right: 26px;
-}
-
-
-#backToTopButton {
   display: none;
   position: fixed;
-  bottom: 15px;
-  right: 26px;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--agforce-green-primary) 0%, var(--agforce-green-light) 100%);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(45, 193, 130, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+#backToTopButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, var(--agforce-green-light) 0%, var(--agforce-green-primary) 100%);
+  box-shadow: 0 12px 35px rgba(45, 193, 130, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+#backToTopButton svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+#backToTopButton:hover svg {
+  transform: translateY(-2px);
+}
+
+/* ========== WHATSAPP BUTTON ========== */
+#whatsappButton {
+  display: block;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+#whatsappButton:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+  border-color: rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+#whatsappButton svg {
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
+}
+
+#whatsappButton:hover svg {
+  transform: scale(1.1);
 }
 
 
@@ -971,5 +1042,258 @@ iframe, video {
   
   .products-texts h4 {
     font-size: 1.5rem;
+  }
+}
+
+/* ======= WhatsApp Button Styles ======= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 12px 35px rgba(37, 211, 102, 0.4);
+  background: linear-gradient(135deg, #128c7e, #25d366);
+}
+
+.whatsapp-float svg {
+  width: 32px;
+  height: 32px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover svg {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 20px;
+    left: 20px;
+    width: 55px;
+    height: 55px;
+  }
+  
+  .whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* ======= Biomassa Section Styles ======= */
+.biomassa-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.biomassa-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23e8f5e8" opacity="0.3"/><circle cx="75" cy="75" r="1" fill="%23e8f5e8" opacity="0.3"/><circle cx="50" cy="10" r="0.5" fill="%23e8f5e8" opacity="0.2"/><circle cx="10" cy="60" r="0.5" fill="%23e8f5e8" opacity="0.2"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.biomassa-header {
+  position: relative;
+  z-index: 2;
+}
+
+.biomassa-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--agforce-green-dark);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.biomassa-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--agforce-green-primary), var(--agforce-green-light));
+  border-radius: 2px;
+}
+
+.biomassa-subtitle {
+  font-size: 1.2rem;
+  color: #555555;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.biomassa-content {
+  position: relative;
+  z-index: 2;
+}
+
+.biomassa-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--agforce-green-dark);
+  margin-bottom: 1.5rem;
+}
+
+.biomassa-description {
+  font-size: 1.1rem;
+  color: #444444;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.biomassa-image {
+  position: relative;
+  z-index: 2;
+}
+
+.biomassa-image img {
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.biomassa-image:hover img {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+.biomassa-uses {
+  position: relative;
+  z-index: 2;
+  margin-top: 60px;
+}
+
+.biomassa-card {
+  background: var(--agforce-white);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(76, 175, 80, 0.1);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.biomassa-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--agforce-green-primary), var(--agforce-green-light));
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.biomassa-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(76, 175, 80, 0.15);
+  border-color: var(--agforce-green-light);
+}
+
+.biomassa-card:hover::before {
+  transform: scaleX(1);
+}
+
+.biomassa-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--agforce-green-light), var(--agforce-green-primary));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--agforce-white);
+  transition: all 0.3s ease;
+}
+
+.biomassa-card:hover .biomassa-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: linear-gradient(135deg, var(--agforce-green-primary), var(--agforce-green-dark));
+}
+
+.biomassa-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--agforce-green-dark);
+  margin-bottom: 1rem;
+}
+
+.biomassa-card p {
+  color: #666666;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .biomassa-title {
+    font-size: 2.4rem;
+  }
+  
+  .biomassa-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .biomassa-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .biomassa-section {
+    padding: 60px 0;
+  }
+  
+  .biomassa-title {
+    font-size: 2rem;
+  }
+  
+  .biomassa-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .biomassa-section-title {
+    font-size: 1.6rem;
+  }
+  
+  .biomassa-card {
+    padding: 1.5rem;
+  }
+  
+  .biomassa-icon {
+    width: 70px;
+    height: 70px;
   }
 }
