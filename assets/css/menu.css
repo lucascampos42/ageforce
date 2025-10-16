@@ -14,7 +14,7 @@ nav#navigation {
   position: absolute;
   height: 80px;
   top: 0;
-  width: 100vw;
+  width: 99vw;
   align-items: center;
   justify-content: space-between;
   transition: all 0.3s ease;
@@ -25,7 +25,7 @@ nav#navigation .container {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px !important;
-  width: 100%;
+  width: 99%;
 }
 
 nav#navigation .logo {
@@ -297,7 +297,6 @@ nav#navigation .active_menu {
   }
   
   nav#navigation .menu-options {
-    width: 100vw;
     right: -100vw;
   }
   
