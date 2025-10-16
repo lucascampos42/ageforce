@@ -37,6 +37,87 @@ $(window).on("load", function(){
   setupPhoneNumber()
 });
 
+// Inicialização quando o DOM estiver carregado
+document.addEventListener('DOMContentLoaded', function() {
+    setupPageLoader();
+    setupWhatsAppButton();
+    setupPhoneNumber();
+    setupScrollAnimations();
+});
+
+// Configuração do loader da página
+function setupPageLoader() {
+    const loader = document.getElementById('pageLoader');
+    
+    // Simula carregamento e esconde o loader
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            if (loader) {
+                loader.classList.add('hidden');
+                // Remove o loader do DOM após a animação
+                setTimeout(() => {
+                    loader.remove();
+                }, 500);
+            }
+        }, 800); // Mostra o loader por pelo menos 800ms
+    });
+}
+
+// Configuração de animações de scroll
+function setupScrollAnimations() {
+    // Intersection Observer para animações de entrada
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+                
+                // Anima elementos filhos com delay
+                const children = entry.target.querySelectorAll('.animate-child');
+                children.forEach((child, index) => {
+                    setTimeout(() => {
+                        child.classList.add('animate-in');
+                    }, index * 100);
+                });
+            }
+        });
+    }, observerOptions);
+
+    // Observa seções para animação
+    const sections = document.querySelectorAll('section, .biomassa-card, .feedstock-card');
+    sections.forEach(section => {
+        section.classList.add('animate-element');
+        observer.observe(section);
+    });
+
+    // Adiciona classe aos elementos filhos
+    const cards = document.querySelectorAll('.biomassa-card, .feedstock-card');
+    cards.forEach(card => {
+        card.classList.add('animate-child');
+    });
+}
+
+// Efeito de parallax suave para imagens
+function setupParallaxEffect() {
+    const images = document.querySelectorAll('.biomassa-image img, .section img');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const rate = scrolled * -0.5;
+        
+        images.forEach(img => {
+            const rect = img.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                img.style.transform = `translateY(${rate * 0.1}px)`;
+            }
+        });
+    });
+}
+
 function setupWhatsAppButton() {
   // Obter número do WhatsApp da variável CSS
   const whatsappNumber = getComputedStyle(document.documentElement)
