@@ -1,4 +1,4 @@
-﻿@media (min-width: 1400px) {
+@media (min-width: 1400px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     max-width: 1140px !important;
   }
@@ -31,9 +31,9 @@
 
 }
 
+/* Tablet e dispositivos médios */
 @media screen and (max-width: 991px) {
   /* Navigation */
-
   nav#navigation .close_menu {
     top: 20px;
   }
@@ -41,22 +41,27 @@
   #navigation li {
     margin-top: 12px;
     font-size: 14px;
-}
+  }
 
   /* Home */
   #home {
     flex-direction: column;
     height: auto;
+    min-height: 100vh;
   }
 
   #home .home-contents {
     margin: auto;
-    width: 720px;
+    width: 100%;
     max-width: 720px;
+    padding: 40px 20px;
+    text-align: center;
   }
 
   #home .home-contents > div {
     width: auto;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
   #home h2 {
@@ -64,31 +69,34 @@
     font-size: 20px;
   }
 
-  #home h1,
-  #home p {
-    width: 340px;
-  }
-
   #home h1 {
-    font-size: 28px;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
 
   #home p {
     font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 30px;
   }
 
-  #home .home-contents button {
-    margin-top: 0;
-    margin-bottom: 60px;
+  #home .home-contents .btn {
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 
   #home .image-home {
     width: 100vw;
-    height: 309px;
+    height: 350px;
+    order: -1;
   }
+}
 
   /* Feedstock */
-
   .validation-numbers .numbers > div {
     width: auto;
     height: 200px;
@@ -97,6 +105,82 @@
   .validation-numbers .numbers > div > h4 {
     font-size: 20px;
     line-height: 30px;
+  }
+}
+
+/* Dispositivos móveis pequenos */
+@media screen and (max-width: 576px) {
+  /* Home */
+  #home .home-contents {
+    padding: 20px 15px;
+  }
+
+  #home h1 {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  #home p {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  #home .home-contents .btn {
+    width: 180px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 12px;
+  }
+
+  #home .image-home {
+    height: 280px;
+  }
+
+  /* Navigation mobile */
+  .logo {
+    width: 200px;
+    height: 60px;
+  }
+
+  /* Números de validação */
+  .validation-numbers .numbers > div {
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  .validation-numbers .numbers > div > h4 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .validation-numbers .numbers > div > p {
+    font-size: 12px;
+  }
+
+  /* Seções gerais */
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  h4 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .validation-numbers .numbers > div > p {

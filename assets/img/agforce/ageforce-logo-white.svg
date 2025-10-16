@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <defs>
+    <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Texto AgForce -->
+  <text x="20" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+    Ag<tspan fill="#1cd99d">Force</tspan>
+  </text>
+  
+  <!-- Subtítulo -->
+  <text x="20" y="42" font-family="Arial, sans-serif" font-size="10" fill="#e9ecef">
+    BIOMASSA SUSTENTÁVEL
+  </text>
+  
+  <!-- Elemento gráfico - folha estilizada -->
+  <path d="M160 15 C165 10, 175 10, 180 15 C185 20, 185 30, 180 35 C175 40, 165 40, 160 35 C155 30, 155 20, 160 15 Z" 
+        fill="#1cd99d" opacity="0.9"/>
+  
+  <!-- Detalhe da folha -->
+  <path d="M160 15 L180 35" stroke="#17b085" stroke-width="1" opacity="0.7"/>
+</svg>

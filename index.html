@@ -3,22 +3,67 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="icon" type="image/x-icon" href="./assets/img/icon.webp">
-  <meta name="keywords" content="AgForce biomassa">
-  <meta name="description"
-    content="AgForce - Especializada em biomassa com a venda de carvão.">
+  <!-- SEO Meta Tags -->
+  <title>AgForce Biomassa - Especialista em Eucalipto e Carvão Vegetal | Colheita Mecanizada</title>
+  <meta name="description" content="AgForce Biomassa: líder em produção de eucalipto, carvão vegetal e biomassa. Colheita mecanizada, frota própria e alta produtividade. Mais de 500 hectares de florestas colhidas e 50 mil m³ de carvão vendidos.">
+  <meta name="keywords" content="AgForce, biomassa, eucalipto, carvão vegetal, colheita mecanizada, madeira, construção civil, cercas, mangueiras, paisagismo, frota própria, alta produtividade">
+  <meta name="author" content="AgForce Biomassa">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agforcebio.com.br/">
+  <meta property="og:title" content="AgForce Biomassa - A força que vem da floresta">
+  <meta property="og:description" content="Especialista em eucalipto e carvão vegetal com colheita mecanizada e frota própria. Mais de 500 hectares de florestas colhidas.">
+  <meta property="og:image" content="./assets/img/agforce/imagem geral.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:locale" content="pt_BR">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="agforce.com.br">
+  <meta property="twitter:url" content="https://agforce.com.br">
+  <meta name="twitter:title" content="AgForce - Biomassa de Eucalipto Sustentável">
+  <meta name="twitter:description" content="Líder em biomassa de eucalipto com colheita mecanizada e frota própria. Produtos sustentáveis para energia renovável.">
+  <meta property="twitter:image" content="./assets/img/agforce/imagem geral.jpg">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="./assets/img/icon.webp">
+  <link rel="apple-touch-icon" href="./assets/img/icon.webp">
+
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&family=Raleway:wght@700&display=swap"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700&display=swap"
-    rel="stylesheet">
   
-  <title>AgForce Biomassa</title>
+  <!-- Optimized font loading -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AgForce Biomassa",
+    "description": "Especialista em biomassa, eucalipto e carvão vegetal com colheita mecanizada",
+    "url": "https://agforcebio.com.br",
+    "logo": "./assets/img/agforce/ageforce logo certo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "areaServed": "BR",
+      "availableLanguage": "Portuguese"
+    },
+    "sameAs": [
+      "https://www.instagram.com/petykeucalipto/",
+      "https://www.facebook.com/petykeucalipto"
+    ]
+  }
+  </script>
 
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./assets/js/jquery-3.6.1.min.js"></script>
@@ -32,64 +77,66 @@
 
 <body>
 
-  <section id="home">
-
-    <nav id="navigation">
+  <header id="home">
+    <nav id="navigation" role="navigation" aria-label="Menu principal">
       <div class="container">
-        <a><img class="logo" src="./assets/img/agforce/ageforce logo certo.png" alt="logo" /></a>
-        <button class="toggle-nav open_menu" aria-label="Abre menu">
-          <svg width="33" height="23" viewBox="0 0 33 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a href="#home" aria-label="AgForce Biomassa - Página inicial">
+          <img class="logo" src="./assets/img/agforce/ageforce logo certo.png" alt="Logo AgForce Biomassa" />
+        </a>
+        <button class="toggle-nav open_menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu-options">
+          <svg width="33" height="23" viewBox="0 0 33 23" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M2 2H31" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M2 11.7385H31" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M2 21.4771H31" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
       </div>
-      <div class="menu-options">
-        <button class="toggle-nav close_menu" aria-label="Fecha menu">
-          <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <div class="menu-options" id="menu-options">
+        <button class="toggle-nav close_menu" aria-label="Fechar menu de navegação" aria-expanded="true">
+          <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M9 17L1 9L9 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </button>
 
-        <ul>
-          <li><a href="#home">home</a></li>
-          <li><a href="#products">produtos</a></li>
-          <li><a href="#modal">aplicação</a></li>
-          <li><a href="#reference">diferencial</a></li>
-          <li><a href="#about">sobre nós</a></li>
-          <li><a href="#contact">contatos</a></li>
+        <ul role="menubar">
+          <li role="none"><a href="#home" role="menuitem">Home</a></li>
+          <li role="none"><a href="#products" role="menuitem">Produtos</a></li>
+          <li role="none"><a href="#modal" role="menuitem">Aplicação</a></li>
+          <li role="none"><a href="#reference" role="menuitem">Diferencial</a></li>
+          <li role="none"><a href="#about" role="menuitem">Sobre Nós</a></li>
+          <li role="none"><a href="#contact" role="menuitem">Contatos</a></li>
         </ul>
       </div>
     </nav>
 
-    <div class="home-contents container-middle">
+    <main class="home-contents container-middle">
       <div class="home-texts scr_top">
         <h1>A força <br> que vem <br> da floresta.</h1>
         <p>
           Se a sua produção não pode parar, a AgForce Biomassa é a força que seu negócio precisa para seguir avançando.
         </p>
-        <button aria-label="Contato"><a class="btn" href="#contact">entre em contato</a></button>
+        <a class="btn" href="#contact" role="button" aria-label="Entre em contato conosco">Entre em contato</a>
       </div>
-    </div>
-    <div class="image-home"></div>
-  </section>
+    </main>
+    <div class="image-home" role="img" aria-label="Imagem de floresta de eucalipto"></div>
+  </header>
 
-  <section id="feedstock">
+  <section id="feedstock" aria-labelledby="feedstock-title">
     <div class="validation-numbers">
       <div class="container">
-        <div class="row numbers scr_right">
-          <div class="col-4 text-center">
-            <h4>+500 Ha</h4>
-            <p> De florestas colhidas</p>
+        <h2 id="feedstock-title" class="sr-only">Nossos números</h2>
+        <div class="row numbers scr_right" role="list">
+          <div class="col-4 text-center" role="listitem">
+            <h3>+500 Ha</h3>
+            <p>De florestas colhidas</p>
           </div>
-          <div class="col-4 text-center">
-            <h4>+50000 M³</h4>
-            <p> De madeira vendida. </p>
+          <div class="col-4 text-center" role="listitem">
+            <h3>+50.000 M³</h3>
+            <p>De madeira vendida</p>
           </div>
-          <div class="col-4 text-center">
-            <h4>+50mil M³</h4>
-            <p> Carvão vendidos</p>
+          <div class="col-4 text-center" role="listitem">
+            <h3>+50.000 M³</h3>
+            <p>Carvão vendidos</p>
           </div>
         </div>
       </div>
@@ -97,44 +144,48 @@
 
     <div class="section-details">
       <div class="container scr_top">
-        <div class="col-lg-6 col-12 image-detail">
-          <img src="./assets/img/materia_prima_eucalipto.webp" alt="Eucaliptos recém cortados empilhados">
-        </div>
-        <div class="col-lg-6 col-12 texts">
-          <h3>Colheita mecanizada</h3>
-          <p>
-            Contamos com equipamentos eficientes e uma equipe experiente trabalhando na colheita do eucalipto e no processamento do cavaco. Nosso foco é executar uma colheita com qualidade e no tempo certo, trazendo benefícios para o produtor do eucalipto e qualidade para quem compra nossos produtos. 
-          </p>
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-12 image-detail">
+            <img src="./assets/img/materia_prima_eucalipto.webp" alt="Eucaliptos recém cortados empilhados prontos para processamento" loading="lazy">
+          </div>
+          <div class="col-lg-6 col-12 texts">
+            <h2>Colheita mecanizada</h2>
+            <p>
+              Contamos com equipamentos eficientes e uma equipe experiente trabalhando na colheita do eucalipto e no processamento do cavaco. Nosso foco é executar uma colheita com qualidade e no tempo certo, trazendo benefícios para o produtor do eucalipto e qualidade para quem compra nossos produtos.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="reference">
+  <section id="reference" aria-labelledby="reference-title">
     <div class="container">
-      <h2 class="scr_top">Porquê somos referência no mercado</h2>
-      <div class="ref-description row scr_left">
-        <div class="col-6 ref-image">
-          <img src="./assets/img/agforce/Colheita.jpg" alt="Um homem com uma camiseta amarela com a logo da Petyk ao lado de eucaliptos roliços">
+      <h2 id="reference-title" class="scr_top">Por que somos referência no mercado</h2>
+      
+      <article class="ref-description row scr_left">
+        <div class="col-md-6 col-12 ref-image">
+          <img src="./assets/img/agforce/Colheita.jpg" alt="Colaborador AgForce trabalhando na colheita de eucalipto com equipamentos modernos" loading="lazy">
         </div>
-        <div class="col-6 ref-texts">
-          <h4>Alta produtividade</h4>
+        <div class="col-md-6 col-12 ref-texts">
+          <h3>Alta produtividade</h3>
           <p>
-            Nossa produtividade é um diferencial, buscamos ser eficientes com os recursos e a matéria-prima para entregar ao cliente um dos custo-benefícios mais vantajosos do mercado.          </p>
+            Nossa produtividade é um diferencial, buscamos ser eficientes com os recursos e a matéria-prima para entregar ao cliente um dos custo-benefícios mais vantajosos do mercado.
+          </p>
         </div>
-      </div>
+      </article>
 
-      <div class="ref-description row inverter scr_right">
-        <div class="col-6 ref-image">
-          <img src="./assets/img/agforce/Frota.jpg" alt="caminhão da Ageforce">
+      <article class="ref-description row inverter scr_right">
+        <div class="col-md-6 col-12 ref-image">
+          <img src="./assets/img/agforce/Frota.jpg" alt="Caminhão da frota própria AgForce para transporte de biomassa" loading="lazy">
         </div>
-        <div class="col-6 ref-texts">
-          <h4>Frota própria</h4>
+        <div class="col-md-6 col-12 ref-texts">
+          <h3>Frota própria</h3>
           <p>
             Nossos produtos são compactados e padronizados para garantir maior tempo de queima e desempenho constante, reduzindo a necessidade de abastecimento frequente e aumentando a eficiência dos equipamentos.
           </p>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
@@ -364,7 +415,7 @@ AgForce Biomassa, a força que vem da floresta.
           </p>
 
           <p class="scr_left_slow_1">
-            <img src="./assets/img/icon_email.png" alt="Icone de email">
+            <img src="./assets/img/icon_email.webp" alt="Ícone de email">
             E-mail: contato@agforce.bio
           </p>
 
@@ -392,31 +443,53 @@ AgForce Biomassa, a força que vem da floresta.
               </div>
       
               <div class="modal-body">
-                <form action="" style="text-align:center">
-                  <h2>Orçamento</h2>
+                <form id="contact-form" style="text-align:center" novalidate>
+                  <h2>Solicitar Orçamento</h2>
+                  <p>Preencha o formulário abaixo e entraremos em contato em breve.</p>
       
-                  <div id="orcamento_campo_nome">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" name="nome">
+                  <div id="orcamento_campo_nome" class="form-group">
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" name="nome" required aria-describedby="nome-error" autocomplete="name">
+                    <span id="nome-error" class="error-message" role="alert"></span>
                   </div>
       
-                  <div id="orcamento_campo_email">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" name="email" placeholder="user@email.com">
+                  <div id="orcamento_campo_email" class="form-group">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-describedby="email-error" autocomplete="email">
+                    <span id="email-error" class="error-message" role="alert"></span>
                   </div>
       
-                  <div id="orcamento_campo_telefone">
-                    <label for="telefone">Telefone</label>
-                    <input type="text" id="telefone" name="telefone" placeholder="(99) 99999-9999">
+                  <div id="orcamento_campo_telefone" class="form-group">
+                    <label for="telefone">Telefone *</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(67) 99999-9999" required aria-describedby="telefone-error" autocomplete="tel">
+                    <span id="telefone-error" class="error-message" role="alert"></span>
+                  </div>
+
+                  <div id="orcamento_campo_produto" class="form-group">
+                    <label for="produto">Produto de interesse</label>
+                    <select id="produto" name="produto" aria-describedby="produto-help">
+                      <option value="">Selecione um produto</option>
+                      <option value="eucalipto-rolico">Eucalipto Roliço</option>
+                      <option value="eucalipto-serrado">Eucalipto Serrado</option>
+                      <option value="carvao-vegetal">Carvão Vegetal</option>
+                      <option value="biomassa">Biomassa</option>
+                      <option value="outros">Outros</option>
+                    </select>
+                    <small id="produto-help">Opcional - nos ajuda a direcionar melhor o atendimento</small>
                   </div>
                   
-                  <div id="orcamento_campo_mensagem">
-                    <label for="mensagem">Mensagem</label>
-                    <textarea name="mensagem" id="mensagem" cols="44" rows="5"></textarea>
+                  <div id="orcamento_campo_mensagem" class="form-group">
+                    <label for="mensagem">Mensagem *</label>
+                    <textarea name="mensagem" id="mensagem" rows="5" required aria-describedby="mensagem-error" placeholder="Descreva suas necessidades, quantidade desejada, localização para entrega, etc."></textarea>
+                    <span id="mensagem-error" class="error-message" role="alert"></span>
                   </div>
       
                   <div id="orcamento_botao">
-                    <button type="submit" aria-label="Enviar">Enviar</button>
+                    <button type="submit" class="btn-submit" aria-describedby="submit-status">
+                      <span class="btn-text">Enviar Solicitação</span>
+                      <span class="btn-loading" style="display: none;">Enviando...</span>
+                    </button>
+                    <div id="submit-status" class="submit-status" role="status" aria-live="polite"></div>
                   </div>
                 </form>
                 
@@ -447,7 +520,7 @@ AgForce Biomassa, a força que vem da floresta.
   </section>
   <footer id="footer">
     <div class="container" style="text-align:center">
-      <img class="logo2" src="./assets/img/agforce/ageforce logo branco.png" alt="logo branca">
+      <img class="logo2" src="./assets/img/agforce/ageforce logo branco.png" alt="Logo AgForce em branco">
       <h4 class="text-uppercase pb-4">Redes Sociais</h4>
       <div class="social">
         <a href="https://www.instagram.com/petykeucalipto/"  target="_blank">
@@ -510,10 +583,14 @@ AgForce Biomassa, a força que vem da floresta.
     </svg>
   </a>
 
+  <!-- Performance optimizations (load first) -->
+  <script src="./assets/js/performance.js"></script>
+  
   <!-- Optional JavaScript; choose one of the two! -->
   <script src="./assets/js/menu.js"></script>
   <script src="./assets/js/main.js"></script>
   <script src="./assets/js/effects.js"></script>
+  <script src="./assets/js/contact-form.js"></script>
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="./assets/js/bootstrap.min.js"></script>
