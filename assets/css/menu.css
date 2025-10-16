@@ -250,13 +250,6 @@ nav#navigation .active_menu {
 
 /* Responsividade para tablets */
 @media screen and (max-width: 768px) {
-  nav#navigation {
-    height: 70px;
-  }
-  
-  nav#navigation .logo {
-    height: 40px;
-  }
   
   .scroll nav#navigation .logo {
     height: 35px;

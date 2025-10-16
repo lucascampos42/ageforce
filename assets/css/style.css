@@ -195,10 +195,12 @@ section{
 }
 
 #home .home-contents {
-  width: 70vh;
+  width: 65vw;
+  min-width: 320px;
+  max-width: 800px;
   padding-top: 80px;
-  padding-right: 40px;
   padding-left: 40px;
+  padding-right: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -355,7 +357,8 @@ section{
   justify-content: center !important;
   gap: 8px !important;
   width: auto !important;
-  min-width: 200px !important;
+  min-width: 180px !important;
+  max-width: 250px !important;
   height: 55px !important;
   padding: 0 24px !important;
   border-radius: 8px !important;
@@ -809,14 +812,7 @@ iframe, video {
   background-color: var(--agforce-green-primary);
 }
 
-.cardcontato .btn_wp{
-  margin-right: 30px;
-}
 
-.cardcontato .btn_wp:hover{
-  border-color: var(--agforce-green-primary);
-  background-color: var(--agforce-green-primary);
-}
 
 .social a {
   text-decoration: none;
