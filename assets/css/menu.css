@@ -1,10 +1,10 @@
 /*================================ Top Navigation ===============================================*/
 .scroll { 
   position: fixed !important;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
   z-index: 100;
   transition: all 0.3s ease;
 }
@@ -32,10 +32,19 @@ nav#navigation .logo {
   height: 50px;
   width: auto;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 .scroll nav#navigation .logo {
   height: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.3));
 }
 
 nav#navigation button {
@@ -48,28 +57,37 @@ nav#navigation button {
   transition: all 0.3s ease;
   padding: 5px;
   border-radius: 5px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 nav#navigation button:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
 }
 
 nav#navigation .close_menu {
   position: absolute;
-  top: 30px;
+  top: 25px;
   right: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  padding: 10px;
-  width: 40px;
-  height: 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 nav#navigation .close_menu:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
   
 nav#navigation .menu-options {
@@ -77,14 +95,15 @@ nav#navigation .menu-options {
   position: fixed;
   justify-content: center;
   z-index: 1000;
-  background: linear-gradient(135deg, var(--nav-secondary-color) 0%, #2d3d1d 100%);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: linear-gradient(135deg, #1a2e0f 0%, #0d1a07 50%, #000000 100%);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   height: 100vh;
   width: 350px;
   right: -350px;
   top: 0;
-  box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+  box-shadow: -8px 0 35px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow-y: auto;
 }
@@ -122,7 +141,9 @@ nav#navigation .active_menu {
 
 #navigation li:hover {
   transform: translateX(-10px);
-  background-color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 #navigation li:first-child {
@@ -142,7 +163,7 @@ nav#navigation .active_menu {
 
 #navigation ul li a:hover {
   color: #ffffff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
 #navigation ul li a::before {
@@ -152,13 +173,14 @@ nav#navigation .active_menu {
   top: 50%;
   transform: translateY(-50%);
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ffffff, transparent);
-  transition: width 0.3s ease;
+  height: 3px;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+  border-radius: 2px;
+  transition: width 0.4s ease;
 }
 
 #navigation ul li a:hover::before {
-  width: 30px;
+  width: 40px;
 }
 
 /* Responsividade para telas grandes */
