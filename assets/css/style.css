@@ -357,7 +357,7 @@ section{
   justify-content: center !important;
   gap: 8px !important;
   width: auto !important;
-  min-width: 180px !important;
+  min-width: 200px !important;
   max-width: 250px !important;
   height: 55px !important;
   padding: 0 24px !important;
@@ -391,6 +391,10 @@ section{
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1;
 }
 
 .btn-icon {

@@ -1,0 +1,29 @@
+# Configurações para compartilhamento social
+<IfModule mod_headers.c>
+    # Headers para imagens
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp)$">
+        Header set Cache-Control "public, max-age=31536000"
+        Header set Access-Control-Allow-Origin "*"
+        Header set Access-Control-Allow-Methods "GET, OPTIONS"
+        Header set Access-Control-Allow-Headers "Content-Type"
+    </FilesMatch>
+    
+    # Headers específicos para meta tags sociais
+    <Files "agf.jpg">
+        Header set Content-Type "image/jpeg"
+        Header set X-Content-Type-Options "nosniff"
+    </Files>
+</IfModule>
+
+# Configurações de MIME types
+<IfModule mod_mime.c>
+    AddType image/jpeg .jpg .jpeg
+    AddType image/png .png
+    AddType image/gif .gif
+    AddType image/webp .webp
+</IfModule>
+
+# Configurações de compressão
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript image/svg+xml
+</IfModule>

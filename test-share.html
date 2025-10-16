@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Compartilhamento - AgForce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .meta-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #28a745;
+        }
+        .test-link {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .test-link:hover {
+            background: #128c7e;
+        }
+        .image-preview {
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Teste de Compartilhamento Social - AgForce</h1>
+        
+        <h2>📋 Informações das Meta Tags</h2>
+        <div class="meta-info">
+            <strong>Título:</strong> AgForce Biomassa - A força que vem da floresta<br>
+            <strong>Descrição:</strong> Especialista em eucalipto e cavaco com tecnologia avançada em silvicultura e frota própria. Mais de 500 hectares de florestas manejadas.<br>
+            <strong>Imagem:</strong> https://agforce.bio/assets/img/agforce/ageforce logo.png<br>
+            <strong>URL:</strong> https://agforce.bio/
+        </div>
+
+        <h2>🖼️ Preview da Imagem</h2>
+        <img src="./assets/img/agforce/ageforce logo.png" alt="Logo AgForce" class="image-preview">
+
+        <h2>🧪 Testes de Compartilhamento</h2>
+        <p>Clique nos links abaixo para testar o compartilhamento:</p>
+        
+        <a href="https://api.whatsapp.com/send?text=Confira%20a%20AgForce%20Biomassa%20-%20https://agforce.bio" 
+           class="test-link" target="_blank">
+            📱 Testar no WhatsApp
+        </a>
+        
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://agforce.bio" 
+           class="test-link" target="_blank" style="background: #1877f2;">
+            📘 Testar no Facebook
+        </a>
+
+        <h2>🔧 Ferramentas de Validação</h2>
+        <p>Use estas ferramentas para validar as meta tags:</p>
+        <ul>
+            <li><a href="https://developers.facebook.com/tools/debug/" target="_blank">Facebook Debugger</a></li>
+            <li><a href="https://cards-dev.twitter.com/validator" target="_blank">Twitter Card Validator</a></li>
+            <li><a href="https://www.linkedin.com/post-inspector/" target="_blank">LinkedIn Post Inspector</a></li>
+        </ul>
+
+        <h2>📝 Instruções</h2>
+        <ol>
+            <li>Certifique-se de que o site está publicado em https://agforce.bio</li>
+            <li>Teste o compartilhamento usando os links acima</li>
+            <li>Use as ferramentas de validação para verificar se as meta tags estão corretas</li>
+            <li>Se necessário, limpe o cache do WhatsApp/Facebook usando os debuggers</li>
+        </ol>
+
+        <div class="meta-info">
+            <strong>⚠️ Importante:</strong> Para que o WhatsApp mostre a imagem corretamente, o site deve estar publicado online com HTTPS. Em ambiente local, a imagem pode não aparecer.
+        </div>
+    </div>
+</body>
+</html>
