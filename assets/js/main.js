@@ -41,8 +41,10 @@ $(window).on("load", function(){
 document.addEventListener('DOMContentLoaded', function() {
     setupPageLoader();
     setupWhatsAppButton();
+    setupWhatsAppTooltips();
     setupPhoneNumber();
     setupScrollAnimations();
+    setupParallaxEffect();
 });
 
 // Configuração do loader da página
@@ -122,22 +124,72 @@ function setupWhatsAppButton() {
   // Obter número do WhatsApp da variável CSS
   const whatsappNumber = getComputedStyle(document.documentElement)
     .getPropertyValue('--whatsapp-number')
-    .replace(/"/g, '')
     .trim()
+    .replace(/"/g, '')
   
   // Configurar botão WhatsApp flutuante
   const whatsappButton = document.getElementById('whatsappButton')
   if (whatsappButton && whatsappNumber) {
-    const message = encodeURIComponent('Olá! Gostaria de mais informações sobre os produtos da AgForce.')
+    const message = encodeURIComponent('Olá! Gostaria de saber mais sobre os produtos da AgForce.')
     whatsappButton.href = `https://wa.me/${whatsappNumber}?text=${message}`
   }
   
   // Configurar botão WhatsApp na seção de contato
   const contactWhatsappButton = document.getElementById('contactWhatsappButton')
   if (contactWhatsappButton && whatsappNumber) {
-    const contactMessage = encodeURIComponent('Olá!! Vi seu site e queria saber mais sobre seus produtos!')
+    const contactMessage = encodeURIComponent('Olá! Vim através do site e gostaria de mais informações sobre os produtos.')
     contactWhatsappButton.href = `https://wa.me/send?phone=${whatsappNumber}&text=${contactMessage}`
-   }
+  }
+}
+
+function setupWhatsAppTooltips() {
+  // Configurar tooltip do botão flutuante
+  const whatsappButton = document.getElementById('whatsappButton')
+  const tooltip = whatsappButton?.querySelector('.whatsapp-tooltip')
+  
+  if (whatsappButton && tooltip) {
+    // Mostrar tooltip após 3 segundos
+    setTimeout(() => {
+      tooltip.style.animation = 'tooltipBounce 3s ease-in-out infinite'
+    }, 3000)
+    
+    // Esconder tooltip ao clicar
+    whatsappButton.addEventListener('click', () => {
+      tooltip.style.opacity = '0'
+      tooltip.style.visibility = 'hidden'
+    })
+  }
+  
+  // Configurar tooltip do botão de contato
+  const contactWrapper = document.querySelector('.whatsapp-contact-wrapper')
+  const contactTooltip = contactWrapper?.querySelector('.whatsapp-contact-tooltip')
+  
+  if (contactWrapper && contactTooltip) {
+    // Mostrar tooltip após 2 segundos
+    setTimeout(() => {
+      contactTooltip.style.animation = 'tooltipPulse 2.5s ease-in-out infinite'
+    }, 2000)
+    
+    // Esconder tooltip ao clicar
+    contactWrapper.addEventListener('click', () => {
+      contactTooltip.style.opacity = '0'
+      contactTooltip.style.visibility = 'hidden'
+    })
+    
+    // Reaparecer tooltip após 10 segundos se não foi clicado
+    let tooltipTimer = setInterval(() => {
+      if (contactTooltip.style.opacity !== '0') {
+        contactTooltip.style.opacity = '1'
+        contactTooltip.style.visibility = 'visible'
+        contactTooltip.style.animation = 'tooltipPulse 2.5s ease-in-out infinite'
+      }
+    }, 10000)
+    
+    // Limpar timer ao clicar
+    contactWrapper.addEventListener('click', () => {
+      clearInterval(tooltipTimer)
+    })
+  }
 }
 
 function setupPhoneNumber() {

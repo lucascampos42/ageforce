@@ -342,78 +342,17 @@
           </p>
 
           <div class="contact-buttons">
-            <a id="contactWhatsappButton" href="#" target="_blank"><button class="btn_wp scr_left_slow_2" aria-label="Whatsapp">Whatsapp</button></a>
-            <button type="button" class="btn-modal scr_left_slow_3" data-bs-toggle="modal" data-bs-target="#modal_contato" aria-label="Orçamento">Orçamento</button>
+            <a id="contactWhatsappButton" href="#" target="_blank" class="whatsapp-contact-wrapper">
+              <div class="whatsapp-contact-tooltip">
+                <span class="whatsapp-contact-tooltip-text">Fale conosco agora! 🚀</span>
+                <div class="whatsapp-contact-tooltip-arrow"></div>
+              </div>
+              <button class="btn_wp scr_left_slow_2" aria-label="Whatsapp">Whatsapp</button>
+            </a>
           </div>
         </div>
         
-        <!-- Inicio modal contato -->
-        <div id="modal_contato" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 
-          <div class="modal-dialog modal-xl" role="document">
-            <div class="modal-content" id="area_modal_contato">
-      
-              <div class="modal-header">
-                <button type="button" class="btn btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
-              </div>
-      
-              <div class="modal-body">
-                <form id="contact-form" style="text-align:center" novalidate>
-                  <h2>Solicitar Orçamento</h2>
-                  <p>Preencha o formulário abaixo e entraremos em contato em breve.</p>
-      
-                  <div id="orcamento_campo_nome" class="form-group">
-                    <label for="nome">Nome completo *</label>
-                    <input type="text" id="nome" name="nome" required aria-describedby="nome-error" autocomplete="name">
-                    <span id="nome-error" class="error-message" role="alert"></span>
-                  </div>
-      
-                  <div id="orcamento_campo_email" class="form-group">
-                    <label for="email">E-mail *</label>
-                    <input type="email" id="email" name="email" placeholder="seu@email.com" required aria-describedby="email-error" autocomplete="email">
-                    <span id="email-error" class="error-message" role="alert"></span>
-                  </div>
-      
-                  <div id="orcamento_campo_telefone" class="form-group">
-                    <label for="telefone">Telefone *</label>
-                    <input type="tel" id="telefone" name="telefone" placeholder="(67) 99999-9999" required aria-describedby="telefone-error" autocomplete="tel">
-                    <span id="telefone-error" class="error-message" role="alert"></span>
-                  </div>
-
-                  <div id="orcamento_campo_produto" class="form-group">
-                    <label for="produto">Produto de interesse</label>
-                    <select id="produto" name="produto" aria-describedby="produto-help">
-                      <option value="">Selecione um produto</option>
-                      <option value="eucalipto-rolico">Eucalipto Roliço</option>
-                      <option value="eucalipto-serrado">Eucalipto Serrado</option>
-                      <option value="carvao-vegetal">Carvão Vegetal</option>
-                      <option value="biomassa">Biomassa</option>
-                      <option value="outros">Outros</option>
-                    </select>
-                    <small id="produto-help">Opcional - nos ajuda a direcionar melhor o atendimento</small>
-                  </div>
-                  
-                  <div id="orcamento_campo_mensagem" class="form-group">
-                    <label for="mensagem">Mensagem *</label>
-                    <textarea name="mensagem" id="mensagem" rows="5" required aria-describedby="mensagem-error" placeholder="Descreva suas necessidades, quantidade desejada, localização para entrega, etc."></textarea>
-                    <span id="mensagem-error" class="error-message" role="alert"></span>
-                  </div>
-      
-                  <div id="orcamento_botao">
-                    <button type="submit" class="btn-submit" aria-describedby="submit-status">
-                      <span class="btn-text">Enviar Solicitação</span>
-                      <span class="btn-loading" style="display: none;">Enviando...</span>
-                    </button>
-                    <div id="submit-status" class="submit-status" role="status" aria-live="polite"></div>
-                  </div>
-                </form>
-                
-      
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Fim modal -->
 
 
         <div class="map col-sm-6">
@@ -526,6 +465,12 @@
   </a>
 
   <a id="whatsappButton" href="#" target="_blank" aria-label="Falar no WhatsApp">
+    <!-- Balão animado -->
+    <div class="whatsapp-tooltip">
+      <span class="whatsapp-tooltip-text">Entre em contato! 💬</span>
+      <div class="whatsapp-tooltip-arrow"></div>
+    </div>
+    
     <svg
       width="28"
       height="28"
@@ -542,6 +487,9 @@
 
   <!-- Performance optimizations (load first) -->
   <script src="./assets/js/performance.js"></script>
+  
+  <!-- jQuery (required for menu.js) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   
   <!-- Optional JavaScript; choose one of the two! -->
   <script src="./assets/js/menu.js"></script>

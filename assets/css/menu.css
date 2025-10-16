@@ -103,19 +103,21 @@ nav#navigation .close_menu:hover {
 nav#navigation .menu-options {
   display: flex;
   position: fixed;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   z-index: 1000;
-  background: linear-gradient(135deg, #1a2e0f 0%, #0d1a07 50%, #000000 100%);
-  backdrop-filter: blur(25px);
-  -webkit-backdrop-filter: blur(25px);
+  background: linear-gradient(135deg, rgba(26, 46, 15, 0.98) 0%, rgba(13, 26, 7, 0.98) 50%, rgba(0, 0, 0, 0.98) 100%);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   height: 100vh;
-  width: 350px;
-  right: -350px;
+  width: 100vw;
+  right: -100vw;
   top: 0;
-  box-shadow: -8px 0 35px rgba(0, 0, 0, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+  border: none;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   overflow-y: auto;
+  padding: 0;
 }
 
 nav#navigation .active_menu {

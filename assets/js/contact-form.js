@@ -1,6 +1,12 @@
 // Validação e funcionalidade do formulário de contato
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
+    
+    // Verificar se o formulário existe
+    if (!form) {
+        return; // Sair se não houver formulário
+    }
+    
     const submitBtn = form.querySelector('.btn-submit');
     const submitStatus = document.getElementById('submit-status');
     
@@ -185,14 +191,8 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             window.open(urlWhatsApp, '_blank');
             
-            // Fechar modal após envio
+            // Limpar formulário após envio
             setTimeout(() => {
-                const modal = bootstrap.Modal.getInstance(document.getElementById('modal_contato'));
-                if (modal) {
-                    modal.hide();
-                }
-                
-                // Limpar formulário
                 form.reset();
                 limparTodosErros();
                 submitStatus.style.display = 'none';
@@ -220,15 +220,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Limpar erros quando o modal for fechado
-    const modal = document.getElementById('modal_contato');
-    if (modal) {
-        modal.addEventListener('hidden.bs.modal', function() {
-            form.reset();
-            limparTodosErros();
-            submitStatus.style.display = 'none';
-            submitBtn.classList.remove('loading');
-            submitBtn.disabled = false;
-        });
-    }
+
 });
