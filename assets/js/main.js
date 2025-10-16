@@ -103,9 +103,9 @@ function setupScrollAnimations() {
     });
 }
 
-// Efeito de parallax suave para imagens
+// Efeito de parallax suave para imagens (excluindo imagens simplificadas)
 function setupParallaxEffect() {
-    const images = document.querySelectorAll('.biomassa-image img, .section img');
+    const images = document.querySelectorAll('.biomassa-image img, .section img:not(.biomassa-image-simple img)');
     
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;

@@ -1589,6 +1589,19 @@ img[data-loading="false"] {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
 }
 
+/* Estilo simplificado para imagem da biomassa sem efeitos */
+.biomassa-image-simple {
+  position: relative;
+}
+
+.biomassa-image-simple img {
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .biomassa-uses {
   position: relative;
   z-index: 2;
