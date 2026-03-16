@@ -23,13 +23,6 @@ function showBackTopButtonOnScroll() {
 }
 
 $(window).on("load", function(){
-  $('#video').html(`
-  <video width="848" height="480" class="embed-responsive-item" controls>
-    <source src="./assets/video/madeireira_petyk.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  `)
-  
   // Configurar botão WhatsApp
   setupWhatsAppButton()
   

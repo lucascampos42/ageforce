@@ -715,10 +715,7 @@ section{
   padding: 160px 0 120px 0;
 }
 
-#about div #video {
-   justify-content: center;
-   display: flex;
-}
+
 
 
 #about .about_text{
@@ -759,7 +756,7 @@ color: var(--agforce-gray-neutral);
 
 /*=========== contact ================*/
 
-iframe, video {
+iframe {
   max-width: 100%;
 }
 
