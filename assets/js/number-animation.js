@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { id: 'counter-carvao', suffix: ' M³' }
     ];
 
-    const formatNumber = (num) => {
+    const formatNumber = (num, element) => {
+        if (num === 1000) return num.toString();
         return new Intl.NumberFormat('pt-BR').format(num);
     };
 
@@ -23,10 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
             current += increment;
             if (current >= target) {
                 current = target;
-                element.innerText = `+${formatNumber(Math.floor(current))}${suffix}`;
+                const prefix = target === 1000 ? '+' : '+ ';
+                element.innerText = `${prefix}${formatNumber(Math.floor(current), element)}${suffix}`;
                 clearInterval(interval);
             } else {
-                element.innerText = `+${formatNumber(Math.floor(current))}${suffix}`;
+                const prefix = target === 1000 ? '+' : '+ ';
+                element.innerText = `${prefix}${formatNumber(Math.floor(current), element)}${suffix}`;
             }
         };
 
